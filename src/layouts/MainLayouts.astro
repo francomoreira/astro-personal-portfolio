@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet"/>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Portfolio</title>
+        <style>
+            * {
+                margin: 0;
+            }
+            :root {
+                /* COLORES */
+                --bg-color: #1f1f1f;
+                --headline: #f8f8f8;
+                --p: #abd1c6;
+                --button: #FFFBEB;
+                --button-hover: #251749;
+                --button-txt: #001e1d;
+                --shadow-box: rgba(0, 0, 0, 0.189);
+                /* fonts sizes */
+                --sm: 70%;
+                --md: 80%;
+                --lg: 100%;
+                --xl: 120%;
+                --xxl: 140%;
+            }
+            body {
+                display: flex;
+                height: 100vh;
+                flex-direction: column;
+                justify-content: space-between;
+                background: var(--bg-color);
+                color: var(--headline);
+                font-family: "Quicksand", sans-serif;
+            }
+            h2 {
+                font-family: "Roboto Mono", monospace;
+                font-size: var(--lg);
+                margin-bottom: 4vh;
+                margin-top: 1vh;
+            }
+            h3 {
+                font-family: "Roboto Mono", monospace;
+                font-size: 100%;
+                margin-bottom: 2vh;
+            }
+            a {
+                text-decoration: none;
+                color: var(--headline);
+            }
+            
+            /* navbar */
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem;
+                background-color: var(--shadow-box);
+            }
+                nav a {
+                    margin-inline-end: 1rem;
+                    font-weight: 500;
+                }
+                nav .mi-nombre {
+                    font-size: var(--xxl);
+                }
+            /* contendor principal */
+            .container-profile {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                /* border: 1px dotted  aqua; */
+                height: 100vh;
+            }
+                /* >> foto perfil */
+                #profile-img {
+                    margin: 4vw;
+                    border-radius: 50%;
+                    width: 38vw;
+                    transition: 0.15s;
+                    box-shadow: 5px 1px 10px var(--shadow-box);
+                }
+                    #profile-img:hover {
+                        width: 40vw;
+                    }
+                /* >> descripcion principal */
+                .profile-description {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border: 1px dotted  #fdc00d;
+                    margin: 4vw;
+                }
+                    .profile-description span {
+                        display: block;
+                        margin-top: 1rem;
+                    }
+                    .container-profile .profile-description .boton-cta {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        background-color: #ffc83d;
+                        color: var(--button-txt);
+                        text-decoration: none;
+                        padding: 15px;
+                        margin: 0.5vh;
+                        margin-top: 3vh;
+                        border-radius: 3vw;
+                        height: 1vh;
+                        width: 10vw;
+                        font-size: var(--md);
+                        font-weight: 700;
+                        transition: 0.1s;
+                    }
+                        .boton-cta:hover {
+                            background-color: var(--p);
+                            /* font-size: 3vh; */
+                            height: 2vh;
+                            width: 14vw;
+                            border-radius: 5vw;
+                        }
+            footer {
+                display: flex;
+                align-items: center;
+                height: 300px;
+                flex-direction: column;
+                background-color: #181818;
+                box-shadow: 0px -10px 20px var(--shadow-box);
+                margin-top: 10vh;
+                padding-top: 1%;
+                padding-bottom: 1%;
+            }
+                .links-s-m {
+                    display: flex;
+                    align-items:flex-end;
+                    border: 1px dotted  yellow;
+                    height: 50vh;
+                }
+                .links-s-m a img {
+                    fill: #f8f8f8;
+                }
+
+                .social-media-logo-6 {
+                    width: 38px;
+                    border-radius: 50%;
+                }
+
+            @media only screen and (max-width: 500px) {
+
+                /* footer */
+                .social-media-logo-1 {
+                    width: 40px;
+                }
+                .social-media-logo-2 {
+                    width: 50px;
+                }
+                .social-media-logo-3 {
+                    width: 38px;
+                }
+                .social-media-logo-4 {
+                    width: 55px;
+                }
+                .social-media-logo-5 {
+                    width: 50px;
+                }
+
+                /* navbar */
+                nav a {
+                    margin-inline-end: 0.2rem;
+                    font-size: var(--md);
+                }
+                nav .mi-nombre {
+                    font-size: var(--lg);
+                    font-weight: 800;
+                }
+                /* nav {
+                background-color: red;
+                } */
+                
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="mi-nombre">
+                <p>Franco Moreira</p>
+            </div>
+            <div class="links-navbar">
+                <a href="http://#">Sobre Mi</a>
+                <a href="http://#">Habilidades</a>
+                <a href="http://#">Proyectos</a>
+                <a href="http://#">Contacto</a>
+            </div>
+        </nav>
+        <header>
+            <div class="container-profile">
+                <img id="profile-img" src="/franmore-dev-profile.jpg" alt="profile"/>
+                <div class="profile-description">
+                    <h1>Hi, I'm Franco🤚
+                    <span>I'm a front-end developer.</span></h1>
+                    <a class="boton-cta" href="#"><strong>Contacto</strong></a>
+                </div>
+            </div>
+        </header>
+
+        <slot />
+
+
+        <!-- footer -->
+        <footer>
+            <div class="links-s-m">
+                <a href="https://twitter.com/franmore_dev"
+                    ><img
+                        class="social-media-logo-1"
+                        src="/logos/twitter-white.svg"
+                        alt=""
+                        width="40px"
+                    /></a
+                >
+                <a href="https://github.com/francomoreira"
+                    ><img
+                        class="social-media-logo-2"
+                        src="/logos/brand-github-filled.svg"
+                        alt=""
+                        width="40px"
+                    /></a
+                >
+                <a href="https://www.linkedin.com/in/francomoreira/"
+                    ><img
+                        class="social-media-logo-3"
+                        src="/logos/linkedin.svg"
+                        alt=""
+                        width="40px"
+                    /></a
+                >
+                <a href="https://www.instagram.com/franmore_dev/"
+                    ><img
+                        class="social-media-logo-4"
+                        src="/logos/brand-instagram.svg"
+                        width="40px"
+                    /></a
+                >
+                <a href="mailto:hidoggy.music@gmail.com"
+                    ><img
+                        class="social-media-logo-5"
+                        src="/logos/mail-filled-white.svg"
+                        alt=""
+                        width="40px"
+                    /></a
+                >
+            </div>
+        </footer>
+    </body>
+</html>

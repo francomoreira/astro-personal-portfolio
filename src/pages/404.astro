@@ -1,0 +1,23 @@
+---
+import MainLayout from '../layouts/MainLayouts.astro'
+---
+
+<MainLayout>
+    <style>
+        .alert-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+    </style>
+    <div class="alert-container">
+        <h1>Error 404</h1>
+        <p>La pagina que buscas no existe</p> 
+        <a href="http://localhost:3000/">HOME</a>
+    </div> 
+</MainLayout>

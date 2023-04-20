@@ -1,0 +1,6 @@
+para abrir el proyecto en el celu https://dashboard.ngrok.com/cloud-edge/endpoints
+
+ngrok http y el peurto del localhost
+para correr astro creo que era astro start
+
+los iconos son de https://tabler-icons.io/
