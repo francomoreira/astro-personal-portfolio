@@ -15,13 +15,13 @@
             }
             :root {
                 /* COLORES */
-                --bg-color: #1f1f1f;
+                --bg-color: #22272e;
                 --headline: #f8f8f8;
                 --p: #abd1c6;
-                --button: #FFFBEB;
-                --button-hover: #251749;
+                --button: #22272e;
+                --button-hover: #16181d;
                 --button-txt: #001e1d;
-                --shadow-box: rgba(0, 0, 0, 0.189);
+                --shadow-box: #16181D;
                 /* fonts sizes */
                 --sm: 70%;
                 --md: 80%;
@@ -94,7 +94,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    border: 1px dotted  #fdc00d;
+                    /* border: 1px dotted  #fdc00d; */
                     margin: 4vw;
                 }
                     .profile-description span {
@@ -131,7 +131,7 @@
                 align-items: center;
                 height: 300px;
                 flex-direction: column;
-                background-color: #181818;
+                background-color: #22272e;
                 box-shadow: 0px -10px 20px var(--shadow-box);
                 margin-top: 10vh;
                 padding-top: 1%;
@@ -140,36 +140,23 @@
                 .links-s-m {
                     display: flex;
                     align-items:flex-end;
-                    border: 1px dotted  yellow;
-                    height: 50vh;
+                    box-shadow: #f8f8f8;
+                    /* border: 1px dotted  yellow; */
                 }
                 .links-s-m a img {
                     fill: #f8f8f8;
+                  
+                    
+                }
+                .social-media {
+                    filter: drop-shadow(4px 4px 2px #00000086);
                 }
 
-                .social-media-logo-6 {
-                    width: 38px;
-                    border-radius: 50%;
-                }
 
             @media only screen and (max-width: 500px) {
 
                 /* footer */
-                .social-media-logo-1 {
-                    width: 40px;
-                }
-                .social-media-logo-2 {
-                    width: 50px;
-                }
-                .social-media-logo-3 {
-                    width: 38px;
-                }
-                .social-media-logo-4 {
-                    width: 55px;
-                }
-                .social-media-logo-5 {
-                    width: 50px;
-                }
+
 
                 /* navbar */
                 nav a {
@@ -215,10 +202,16 @@
 
         <!-- footer -->
         <footer>
+            <div class='links-footer'>
+                <p>Sobre mi</p>
+                <p>Sobre mi</p>
+                <p>Sobre mi</p>
+                <p>Sobre mi</p>
+            </div>
             <div class="links-s-m">
                 <a href="https://twitter.com/franmore_dev"
                     ><img
-                        class="social-media-logo-1"
+                        class="social-media"
                         src="/logos/twitter-white.svg"
                         alt=""
                         width="40px"
@@ -226,7 +219,7 @@
                 >
                 <a href="https://github.com/francomoreira"
                     ><img
-                        class="social-media-logo-2"
+                        class="social-media"
                         src="/logos/brand-github-filled.svg"
                         alt=""
                         width="40px"
@@ -234,7 +227,7 @@
                 >
                 <a href="https://www.linkedin.com/in/francomoreira/"
                     ><img
-                        class="social-media-logo-3"
+                        class="social-media"
                         src="/logos/linkedin.svg"
                         alt=""
                         width="40px"
@@ -242,14 +235,14 @@
                 >
                 <a href="https://www.instagram.com/franmore_dev/"
                     ><img
-                        class="social-media-logo-4"
+                        class="social-media"
                         src="/logos/brand-instagram.svg"
                         width="40px"
                     /></a
                 >
                 <a href="mailto:hidoggy.music@gmail.com"
                     ><img
-                        class="social-media-logo-5"
+                        class="social-media"
                         src="/logos/mail-filled-white.svg"
                         alt=""
                         width="40px"
