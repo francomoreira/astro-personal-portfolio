@@ -1,3 +1,8 @@
+---
+import Footer from "../components/Footer.astro";
+
+---
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -33,7 +38,7 @@
                 display: flex;
                 height: 100vh;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: flex-start;
                 background: var(--bg-color);
                 color: var(--headline);
                 font-family: "Quicksand", sans-serif;
@@ -73,16 +78,17 @@
             .container-profile {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
-                /* border: 1px dotted  aqua; */
+                border: 1px dotted  aqua;
                 height: 100vh;
             }
                 /* >> foto perfil */
                 #profile-img {
-                    margin: 4vw;
+                    margin: 3vw;
                     border-radius: 50%;
-                    width: 38vw;
+                    width: 40vw;
+                    max-width: 300px;
                     transition: 0.15s;
                     box-shadow: 5px 1px 10px var(--shadow-box);
                 }
@@ -94,12 +100,15 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    /* border: 1px dotted  #fdc00d; */
+                    justify-content: center;
+                    border: 1px dotted  #fdc00d;
                     margin: 4vw;
+                    
                 }
                     .profile-description span {
                         display: block;
                         margin-top: 1rem;
+                        
                     }
                     .container-profile .profile-description .boton-cta {
                         display: flex;
@@ -108,16 +117,18 @@
                         text-decoration: none;
                         background-color: #ffc83d;
                         color: var(--button-txt);
+                        box-shadow: 5px 1px 10px var(--shadow-box);
                         text-decoration: none;
                         padding: 15px;
                         margin: 0.5vh;
                         margin-top: 3vh;
                         border-radius: 3vw;
                         height: 1vh;
-                        width: 10vw;
+                        width: 12vw;
                         font-size: var(--md);
                         font-weight: 700;
                         transition: 0.1s;
+                        
                     }
                         .boton-cta:hover {
                             background-color: var(--p);
@@ -126,31 +137,7 @@
                             width: 14vw;
                             border-radius: 5vw;
                         }
-            footer {
-                display: flex;
-                align-items: center;
-                height: 300px;
-                flex-direction: column;
-                background-color: #22272e;
-                box-shadow: 0px -10px 20px var(--shadow-box);
-                margin-top: 10vh;
-                padding-top: 1%;
-                padding-bottom: 1%;
-            }
-                .links-s-m {
-                    display: flex;
-                    align-items:flex-end;
-                    box-shadow: #f8f8f8;
-                    /* border: 1px dotted  yellow; */
-                }
-                .links-s-m a img {
-                    fill: #f8f8f8;
-                  
-                    
-                }
-                .social-media {
-                    filter: drop-shadow(4px 4px 2px #00000086);
-                }
+
 
 
             @media only screen and (max-width: 500px) {
@@ -177,7 +164,7 @@
     <body>
         <nav>
             <div class="mi-nombre">
-                <a href="/"><p>Franco Moreira</p></a>
+                <p><a href="/">Franco Moreira</a></p>
             </div>
             <div class="links-navbar">
                 <a href="http://#">Sobre Mi</a>
@@ -201,54 +188,7 @@
 
 
         <!-- footer -->
-        <footer>
-            <div class='links-footer'>
-                <p>Sobre mi</p>
-                <p>Sobre mi</p>
-                <a href="/">Home</a>
-                <a href="../pages/about.astro">About</a>
-            </div>
-            <div class="links-s-m">
-                <a href="https://twitter.com/franmore_dev"
-                    ><img
-                        class="social-media"
-                        src="/logos/twitter-white.svg"
-                        alt=""
-                        width="40px"
-                    /></a
-                >
-                <a href="https://github.com/francomoreira"
-                    ><img
-                        class="social-media"
-                        src="/logos/brand-github-filled.svg"
-                        alt=""
-                        width="40px"
-                    /></a
-                >
-                <a href="https://www.linkedin.com/in/francomoreira/"
-                    ><img
-                        class="social-media"
-                        src="/logos/linkedin.svg"
-                        alt=""
-                        width="40px"
-                    /></a
-                >
-                <a href="https://www.instagram.com/franmore_dev/"
-                    ><img
-                        class="social-media"
-                        src="/logos/brand-instagram.svg"
-                        width="40px"
-                    /></a
-                >
-                <a href="mailto:hidoggy.music@gmail.com"
-                    ><img
-                        class="social-media"
-                        src="/logos/mail-filled-white.svg"
-                        alt=""
-                        width="40px"
-                    /></a
-                >
-            </div>
-        </footer>
+        <Footer />
+
     </body>
 </html>

@@ -1,0 +1,91 @@
+
+<footer>
+    <div class='links-footer'>
+        <p>Contacto</p>
+        <p>Proyectos</p>
+        <p><a href="/">Home</a></p>
+        <p><a href="../pages/about.astro">About</a></p>
+    </div>
+    <div class="links-s-m">
+        <a href="https://twitter.com/franmore_dev"
+            ><img
+                class="social-media"
+                src="/logos/twitter-white.svg"
+                alt=""
+                width="30px"
+            /></a
+        >
+        <a href="https://github.com/francomoreira"
+            ><img
+                class="social-media"
+                src="/logos/brand-github-filled.svg"
+                alt=""
+                width="30px"
+            /></a
+        >
+        <a href="https://www.linkedin.com/in/francomoreira/"
+            ><img
+                class="social-media"
+                src="/logos/linkedin.svg"
+                alt=""
+                width="30px"
+            /></a
+        >
+        <a href="https://www.instagram.com/franmore_dev/"
+            ><img
+                class="social-media"
+                src="/logos/brand-instagram.svg"
+                width="30px"
+            /></a
+        >
+        <a href="mailto:hidoggy.music@gmail.com"
+            ><img
+                class="social-media"
+                src="/logos/mail-filled-white.svg"
+                alt=""
+                width="30px"
+            /></a
+        >
+    </div>
+    <p class="copyright-text">
+        Franco Moreira ©️ 2023 - All rights reserved.
+    </p>
+</footer>
+
+
+<style>
+footer {
+display: flex;
+align-items: center;
+height: 300px;
+flex-direction: column;
+background-color: #22272e;
+box-shadow: 0px -1px 5px var(--shadow-box);
+padding-top: 1%;
+padding-bottom: 1%;
+}
+    .links-s-m {
+        display: flex;
+        align-items:flex-end;
+        /* box-shadow: #f8f8f8; */
+        border: 1px dotted  yellow;
+        height: 30rem;
+    }
+    /* .links-s-m a img {
+        fill: #f8f8f8;       
+    } */
+    .social-media {
+        filter: drop-shadow(2px 4px 2px #00000086);
+    }
+    .social-media:hover {
+        margin-bottom: 1vh;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--headline);
+    }
+    .copyright-text{
+        font-size: 0.75em;
+    }
+</style>
