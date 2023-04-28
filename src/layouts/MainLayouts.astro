@@ -1,7 +1,8 @@
 ---
 import Footer from "../components/Footer.astro";
-
+import data from '../data.json';
 ---
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -80,7 +81,6 @@ import Footer from "../components/Footer.astro";
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                border: 1px dotted  aqua;
                 height: 100vh;
             }
                 /* >> foto perfil */
@@ -101,7 +101,6 @@ import Footer from "../components/Footer.astro";
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    border: 1px dotted  #fdc00d;
                     margin: 4vw;
                     
                 }
@@ -141,10 +140,6 @@ import Footer from "../components/Footer.astro";
 
 
             @media only screen and (max-width: 500px) {
-
-                /* footer */
-
-
                 /* navbar */
                 nav a {
                     margin-inline-end: 0.2rem;
@@ -164,13 +159,13 @@ import Footer from "../components/Footer.astro";
     <body>
         <nav>
             <div class="mi-nombre">
-                <p><a href="/">Franco Moreira</a></p>
+                <p><a href="/">{data.nombre}</a></p>
             </div>
             <div class="links-navbar">
-                <a href="http://#">Sobre Mi</a>
-                <a href="http://#">Habilidades</a>
-                <a href="http://#">Proyectos</a>
-                <a href="http://#">Contacto</a>
+                <a href="#">Sobre Mi</a>
+                <a href="#">Habilidades</a>
+                <a href="#my-projects">My Projects</a>
+                <a href={data.email}>Contacto</a>
             </div>
         </nav>
         <header>
@@ -179,7 +174,7 @@ import Footer from "../components/Footer.astro";
                 <div class="profile-description">
                     <h1>Hi, I'm Franco🤚
                     <span>I'm a front-end developer.</span></h1>
-                    <a class="boton-cta" href="#"><strong>Contacto</strong></a>
+                    <a class="boton-cta" href={data.email}><strong>Contacto</strong></a>
                 </div>
             </div>
         </header>
