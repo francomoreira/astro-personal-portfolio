@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 import data from '../data.json';
 ---
 
@@ -60,21 +61,6 @@ import data from '../data.json';
                 color: var(--headline);
             }
             
-            /* navbar */
-            nav {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 1rem;
-                background-color: var(--shadow-box);
-            }
-                nav a {
-                    margin-inline-end: 1rem;
-                    font-weight: 500;
-                }
-                nav .mi-nombre {
-                    font-size: var(--xxl);
-                }
             /* contendor principal */
             .container-profile {
                 display: flex;
@@ -137,37 +123,10 @@ import data from '../data.json';
                             border-radius: 5vw;
                         }
 
-
-
-            @media only screen and (max-width: 500px) {
-                /* navbar */
-                nav a {
-                    margin-inline-end: 0.2rem;
-                    font-size: var(--md);
-                }
-                nav .mi-nombre {
-                    font-size: var(--lg);
-                    font-weight: 800;
-                }
-                /* nav {
-                background-color: red;
-                } */
-                
-            }
         </style>
     </head>
     <body>
-        <nav>
-            <div class="mi-nombre">
-                <p><a href="/">{data.nombre}</a></p>
-            </div>
-            <div class="links-navbar">
-                <a href="#">Sobre Mi</a>
-                <a href="#">Habilidades</a>
-                <a href="#my-projects">My Projects</a>
-                <a href={data.email}>Contacto</a>
-            </div>
-        </nav>
+        <Navbar />
         <header>
             <div class="container-profile">
                 <img id="profile-img" src="/franmore-dev-profile.jpg" alt="profile"/>
@@ -181,8 +140,6 @@ import data from '../data.json';
 
         <slot />
 
-
-        <!-- footer -->
         <Footer />
 
     </body>

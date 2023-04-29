@@ -1,0 +1,137 @@
+---
+import data from '../data.json';
+import IconosSocialmedia from './iconosSocialmedia.astro';
+---
+<script>
+    const iconoBurger = document.querySelector('.icono-burger-menu');
+    const menuburger = document.querySelector('.links-burger');
+
+    iconoBurger.addEventListener('click', () => {
+        menuburger.classList.toggle('invisible')
+    });
+</script>
+
+<nav>
+    <div class="mi-nombre">
+        <p><a href="/">{data.nombre}</a></p>
+    </div>
+<!-- Icono burger menu -->
+    <div class='icono-burger-menu'>
+        <img  class="menu-icon" src="/logos/menu.svg" alt="menu icon">
+    </div>
+<!-- los links del navbar -->
+    <div class="links-navbar">
+        <a href="#">Habilidades</a>
+        <a href="#my-projects">Portfolio</a>
+        <a href="#">Formación</a>
+        <a href={data.email}>Contacto</a>
+    </div>
+</nav>
+
+<!-- html menu mobile -->
+<div class="modal" >
+    <div class="links-burger invisible">
+        <a href="#">Habilidades</a>
+        <a href="#my-projects">Portfolio</a>
+        <a href="#">Formación</a>
+        <a href={data.email}>Contacto</a>
+        <IconosSocialmedia />
+    </div>
+</div>
+
+
+<style>
+* {
+    margin: 0;
+}
+a { 
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--headline);
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--shadow-box);
+    padding: 10px;
+}
+    nav .mi-nombre {
+        font-size: var(--xxl);
+        margin-left: 1rem;
+    }
+    nav .links-navbar {
+        border: dotted yellow 1px;
+    }
+        nav .links-navbar a {
+            margin-inline-end: 1rem;
+        }
+    nav .menu-icon{
+        width: 2rem;
+        display: none;
+        margin-right: 0.5rem;
+    }
+
+
+/* 
+
+css MENU MOBILE
+
+*/
+
+.links-burger{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    max-width: 600px;
+    width: 50vw;
+    height: 30vh;
+    align-items:center;
+    top: 55px;
+    right: 0px;
+    background-color: var(--shadow-box);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+}
+
+    .links-burger a {
+        padding-top: 20px;
+    }
+
+
+
+/* 
+mobile 425px
+tablet 768px
+laptop hasta 1024px
+pc large screen, superiores a 1024px
+ */
+
+
+
+@media only screen and (max-width: 700px) {
+
+    .links-navbar{
+        display: none;
+    }
+    nav .menu-icon {
+        display: inline;
+    }
+    .links-burger{
+        display: flex;
+    }
+
+}
+
+/* 
+
+fuera del media query, al final
+
+*/
+
+.invisible{
+    display: none;
+}
+
+</style>

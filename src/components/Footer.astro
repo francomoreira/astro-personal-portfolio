@@ -1,5 +1,9 @@
 ---
 import data from '../data.json';
+import IconosSocialmedia from './iconosSocialmedia.astro';
+
+const fechaActual = new Date();
+const year = fechaActual.getFullYear();
 ---
 
 <footer>
@@ -9,48 +13,9 @@ import data from '../data.json';
         <p><a href="/">Home</a></p>
         <p><a href="../pages/about.astro">About</a></p>
     </div>
-    <div class="links-s-m">
-        <a href={data.twitter}
-            ><img
-                class="social-media"
-                src="/logos/twitter-white.svg"
-                alt=""
-                width="30px"
-            /></a
-        >
-        <a href={data.github}
-            ><img
-                class="social-media"
-                src="/logos/brand-github-filled.svg"
-                alt=""
-                width="30px"
-            /></a
-        >
-        <a href={data.linkedin}
-            ><img
-                class="social-media"
-                src="/logos/linkedin.svg"
-                alt=""
-                width="30px"
-            /></a
-        >
-        <a href={data.instagram}
-            ><img
-                class="social-media"
-                src="/logos/brand-instagram.svg"
-                width="30px"
-            /></a
-        >
-        <a href={data.email}><img
-                class="social-media"
-                src="/logos/mail-filled-white.svg"
-                alt=""
-                width="30px"
-            /></a
-        >
-    </div>
+    <IconosSocialmedia />
     <p class="copyright-text">
-        {data.nombre} ©️ 2023 - All rights reserved.
+        {data.nombre} ©️ {year} - All rights reserved. 
     </p>
 </footer>
 
@@ -66,23 +31,6 @@ box-shadow: 0px -1px 5px var(--shadow-box);
 padding-top: 1%;
 padding-bottom: 1%;
 }
-    .links-s-m {
-        display: flex;
-        align-items:flex-end;
-        /* box-shadow: #f8f8f8; */
-        /* border: 1px dotted  yellow; */
-        height: 30rem;
-    }
-    /* .links-s-m a img {
-        fill: #f8f8f8;       
-    } */
-    .social-media {
-        filter: drop-shadow(2px 4px 2px #00000086);
-    }
-    .social-media:hover {
-        margin-bottom: 1vh;
-    }
-
     a {
         text-decoration: none;
         color: var(--headline);

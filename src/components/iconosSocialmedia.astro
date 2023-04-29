@@ -1,0 +1,58 @@
+---
+import data from '../data.json';
+---
+
+<div class="links-s-m">
+        <a href={data.twitter}
+            ><img
+                class="social-media"
+                src="/logos/twitter-white.svg"
+                alt=""
+                width="30px"
+            /></a
+        >
+        <a href={data.github}
+            ><img
+                class="social-media"
+                src="/logos/brand-github-filled.svg"
+                alt=""
+                width="30px"
+            /></a
+        >
+        <a href={data.linkedin}
+            ><img
+                class="social-media"
+                src="/logos/linkedin.svg"
+                alt=""
+                width="30px"
+            /></a
+        >
+        <a href={data.instagram}
+            ><img
+                class="social-media"
+                src="/logos/brand-instagram.svg"
+                width="30px"
+            /></a
+        >
+        <a href={data.email}><img
+                class="social-media"
+                src="/logos/mail-filled-white.svg"
+                alt=""
+                width="30px"
+            /></a
+        >
+    </div>
+
+<style>
+    .links-s-m {
+        display: flex;
+        align-items:flex-end;
+        height: 5vh;
+    }
+    .social-media {
+        filter: drop-shadow(2px 4px 2px #00000086);
+    }
+    .social-media:hover {
+        margin-bottom: 1vh;
+    }
+</style>
