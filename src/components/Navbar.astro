@@ -11,15 +11,15 @@ import IconosSocialmedia from './iconosSocialmedia.astro';
     });
 </script>
 
-<nav>
-    <div class="mi-nombre">
+<nav class="bg-gray-900 drop-shadow-md">
+    <div class="mi-nombre drop-shadow-md">
         <p><a href="/">{data.nombre}</a></p>
     </div>
-<!-- Icono burger menu -->
+    <!-- Icono burger menu -->
     <div class='icono-burger-menu'>
         <img  class="menu-icon" src="/logos/menu.svg" alt="menu icon">
     </div>
-<!-- los links del navbar -->
+    <!-- los links del navbar -->
     <div class="links-navbar">
         <!-- <a href="#">Habilidades</a> -->
         <a href="#my-projects">My Projects</a>
@@ -53,7 +53,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--shadow-box);
     padding: 10px;
 }
     nav .mi-nombre {

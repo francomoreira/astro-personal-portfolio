@@ -3,7 +3,7 @@ import MainLayouts from '../layouts/MainLayouts.astro'
 ---
 
 <MainLayouts>
-	<style>
+<!-- 	<style>
 		.container-links {
         background-color: #9BA4B4;
         display: flex;
@@ -44,9 +44,16 @@ import MainLayouts from '../layouts/MainLayouts.astro'
                 height: 2vh;
                 border-radius: 5vw;
             }
-	</style>
-	<div class="container-links">
-		<h2 class='h2-de-la-pagina' id="my-projects">My Projects 🚀</h2> 
+	</style> -->
+	<style>
+        h2 {
+            font-family: "Roboto Mono", monospace;
+        }
+    </style>
+    
+    
+    <div class="container-links">
+		<h2 class='text-3xl' id="my-projects">My Projects 🚀</h2> 
 		<div class="personal-projects-links"> 
 			<a class="boton-links" href="https://francomoreira.github.io/projects/sticky-menu-fixed/"><strong>Sticky Menu</strong></a>
             <a class="boton-links" href="https://francomoreira.github.io/projects/random-color/"><strong>Random color - Button</strong></a>
@@ -65,7 +72,6 @@ import MainLayouts from '../layouts/MainLayouts.astro'
 
 		</div>
 	</div> 
-   
 
 
 </MainLayouts>
