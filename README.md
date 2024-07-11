@@ -21,10 +21,6 @@ La simplicidad de la estructura hace que sea fácil escalar el sitio y administr
 ## Demo
 * https://franmore.ar
 
-## Contacto
-
-¡Si estás interesado en trabajar conmigo o tienes alguna pregunta sobre mis proyectos, no dudes en contactarme!
-
----
+## Agradecimiento
 
 ¡Gracias por visitar mi portfolio! Espero que disfrutes explorando mis trabajos. 😊

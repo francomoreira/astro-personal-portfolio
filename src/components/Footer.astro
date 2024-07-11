@@ -9,7 +9,7 @@ const year = fechaActual.getFullYear();
 <footer>
     <div class='links-footer'>
         <p><a href={data.email}>Contacto</a></p>
-        <p>Proyectos</p>
+        <p><a href="#my-projects">Proyectos</p></a>
         <p><a href="/">Home</a></p>
         <p><a href="../pages/about.astro">About</a></p>
     </div>
@@ -21,21 +21,27 @@ const year = fechaActual.getFullYear();
 
 
 <style>
-footer {
-display: flex;
-align-items: center;
-height: 300px;
-flex-direction: column;
-background-color: #22272e;
-box-shadow: 0px -1px 5px var(--shadow-box);
-padding-top: 1%;
-padding-bottom: 1%;
-}
-    a {
-        text-decoration: none;
-        color: var(--headline);
-    }
-    .copyright-text{
-        font-size: 0.75em;
-    }
+    footer {
+        display: flex;
+        align-items: center;
+        height: 300px;
+        flex-direction: column;
+        background-color: #22272e;
+        box-shadow: 0px -1px 5px var(--shadow-box);
+        padding-top: 1%;
+        padding-bottom: 1%;
+        }
+        .links-footer {
+        display: inline-flex;
+        flex-wrap: wrap;
+        
+        }
+        a {
+            text-decoration: none;
+            color: var(--headline);
+            margin: 6px;
+        }
+        .copyright-text{
+            font-size: 0.75em;
+        }
 </style>
