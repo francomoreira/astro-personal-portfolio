@@ -11,6 +11,9 @@ import data from '../data.json';
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -137,61 +140,86 @@ import data from '../data.json';
         </style> -->
     </head>
     <body class="
-        bg-gray-800
+        bg-[#31363F]
+        
         flex
         flex-col
-        h-screen
+        
         justify-start
-        text-gray-100
+        text-[#EEEEEE]
+        border-2
         ">
         <Navbar />
-        <header>
+        <header class="
+                    flex 
+                    items-center 
+                    justify-center">
             <div class="
                 container 
                 flex 
                 flex-row 
                 h-screen
                 items-center 
-                justify-center 
+                justify-between 
+                border-2
+                max-w-screen-md
+                
                 ">
-                <img id="profile-img" src="/franmore-dev-profile.jpg" alt="profile" 
+                <div class="
+                            border-2
+                            flex 
+                            flex-col
+                            items-center 
+                            justify-end       
+                            ">
+                    <img id="profile-img" src="/franmore-dev-profile.jpg" alt="profile" 
+                        class="
+                            drop-shadow-lg
+                            rounded-full
+                            transition-[0.15s]
+                            max-w-xs
+                            w-3/4
+                        "/>
+                </div>
+
+                <div id="hero"
                     class="
-                        drop-shadow-lg
-                        max-w-[300px]
-                        ml-10
-                        mr-5
-                        rounded-full
-                        transition-[0.15s]
-                        w-2/5
-                    "/>
-                <div class="profile-description 
+                        profile-description 
                         flex 
                         flex-col 
                         items-center 
                         justify-center 
+                        border-2
                         ">
-                    <h1 class="
-                        text-5xl">
-                        Hi, I'm Franco🤚
-                    </h1>
-                    <h2 class="
-                        text-xl
-                        mt-3">
-                        <span> I'm a front-end developer.</span>
-                    </h2>
-                    <a href={data.email} class="mt-3">
-                        <button 
-                            class="
-                                bg-red-100 
-                                font-bold 
-                                h-12 
-                                rounded-full 
-                                text-2xl  
-                                text-gray-800
-                                w-40 
-                            ">Contacto</button>
-                    </a>
+                    <div id="titulos">
+                        <h1 class="
+                            text-5xl
+                            font-medium">
+                            Hi, I'm Franco🤚
+                        </h1>
+                        <h2 class="
+                            text-3xl
+                            mt-3">
+                            <span> I'm a front-end developer.</span>
+                        </h2>
+                    </div>
+                    <div id="boton-CTA" class="border-2 flex items-center justify-center">
+                        <a href={data.email} class="mt-3 drop-shadow-2xl"  >
+                            <button 
+                                class="
+                                    bg-[#76ABAE] 
+                                    font-semibold
+                                    h-12 
+                                    rounded-full 
+                                    text-2xl  
+                                    text-[#EEEEEE]
+                                    w-40 
+                                    drop-shadow-md
+                                ">Contacto</button>
+                        </a>
+                    </div>  
                 </div>
+
             </div>
         </header>
 
@@ -203,9 +231,9 @@ import data from '../data.json';
 </html>
 <style>
     body {
-        font-family: "Quicksand", sans-serif;
+        font-family: "Montserrat", sans-serif;
     }
     h2 {
-        font-family: "Roboto Mono", monospace;
+        font-family: "Quicksand", sans-serif;
     }
 </style>

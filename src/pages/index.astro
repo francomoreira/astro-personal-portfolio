@@ -4,22 +4,7 @@ import MainLayouts from '../layouts/MainLayouts.astro'
 
 <MainLayouts>
 <!-- 	<style>
-		.container-links {
-        background-color: #9BA4B4;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    .h2-de-la-pagina {
-        margin-top: 5vh;
-        text-shadow: 2px 2px 2px #0000003d;
-    }
-        .personal-projects-links {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            padding-bottom: 1vh;
-        }
+
             .boton-links {
                 display: flex;
                 justify-content: center;
@@ -52,10 +37,20 @@ import MainLayouts from '../layouts/MainLayouts.astro'
     </style>
     
     
-    <div class="container-links">
-		<h2 class='text-3xl' id="my-projects">My Projects 🚀</h2> 
-		<div class="personal-projects-links"> 
-			<a class="boton-links" href="https://francomoreira.github.io/projects/sticky-menu-fixed/"><strong>Sticky Menu</strong></a>
+    <div class="container-links flex items-center flex-col">
+		<h2 class='text-3xl mt-5 drop-shadow-lg' id="my-projects">My Projects 🚀</h2> 
+		<div class="personal-projects-links flex items-center flex-col pb-"> 
+			<a class="link
+                    boton-links
+                    flex
+                    justify-center
+                    items-center
+                    no-underline
+                    p-4
+                    m-2
+                    rounded-full
+                    bg-[#76ABAE]" 
+                href="https://francomoreira.github.io/projects/sticky-menu-fixed/"><strong>Sticky Menu</strong></a>
             <a class="boton-links" href="https://francomoreira.github.io/projects/random-color/"><strong>Random color - Button</strong></a>
 			<a class="boton-links" href="https://codepen.io/francomoreira/pen/RwYWqWN"><strong>Calcular bonos de descuentos</strong></a>
 			<a class="boton-links" href="https://francomoreira.github.io/projects/Descarga-miniaturas-youtube/"><strong>YT Thumbnails Downloader</strong></a>
