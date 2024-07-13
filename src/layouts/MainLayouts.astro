@@ -141,55 +141,54 @@ import data from '../data.json';
     </head>
     <body class="
         bg-[#31363F]
-        
+        border-2
         flex
         flex-col
-        
         justify-start
         text-[#EEEEEE]
-        border-2
         ">
         <Navbar />
         <header class="
                     flex 
                     items-center 
-                    justify-center">
+                    justify-center
+                    ">
             <div class="
-                container 
-                flex 
-                flex-row 
-                h-screen
-                items-center 
-                justify-between 
                 border-2
+                container
+                flex
+                flex-row
+                h-screen
+                items-center
+                justify-between
                 max-w-screen-md
                 
                 ">
                 <div class="
-                            border-2
-                            flex 
-                            flex-col
-                            items-center 
-                            justify-end       
-                            ">
+                        border-2
+                        flex 
+                        flex-col
+                        items-center 
+                        justify-end       
+                        ">
                     <img id="profile-img" src="/franmore-dev-profile.jpg" alt="profile" 
                         class="
                             drop-shadow-lg
+                            max-w-xs
                             rounded-full
                             transition-[0.15s]
-                            max-w-xs
                             w-3/4
                         "/>
                 </div>
 
                 <div id="hero"
                     class="
-                        profile-description 
+                        border-2
                         flex 
                         flex-col 
                         items-center 
                         justify-center 
-                        border-2
+                        profile-description 
                         ">
                     <div id="titulos">
                         <h1 class="
@@ -203,18 +202,23 @@ import data from '../data.json';
                             <span> I'm a front-end developer.</span>
                         </h2>
                     </div>
-                    <div id="boton-CTA" class="border-2 flex items-center justify-center">
+                    <div id="boton-CTA" class="
+                                            border-2 
+                                            flex 
+                                            items-center 
+                                            justify-center
+                                            ">
                         <a href={data.email} class="mt-3 drop-shadow-2xl"  >
                             <button 
                                 class="
                                     bg-[#76ABAE] 
+                                    drop-shadow-md
                                     font-semibold
                                     h-12 
                                     rounded-full 
-                                    text-2xl  
                                     text-[#EEEEEE]
+                                    text-2xl  
                                     w-40 
-                                    drop-shadow-md
                                 ">Contacto</button>
                         </a>
                     </div>  
