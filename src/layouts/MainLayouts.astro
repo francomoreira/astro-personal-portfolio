@@ -1,5 +1,5 @@
 ---
-/* import Footer from "../components/Footer.astro"; */
+import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import data from '../data.json';
 ---
@@ -8,16 +8,10 @@ import data from '../data.json';
 <html lang="es">
     <head>
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- incluyendo taiwind -->
+        <!-- incluyendo tailwind -->
         <link href="./src/output.css" rel="stylesheet">
 
         <!-- agregando los meta para facebook (Open Graph -->
@@ -29,6 +23,14 @@ import data from '../data.json';
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://franmore.ar/franmore-dev-profile.jpg">
 
+        <!--google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
         <title>My Portfolio</title>
 <!--         <style>
             * {
@@ -140,12 +142,12 @@ import data from '../data.json';
         </style> -->
     </head>
     <body class="
-        bg-[#31363F]
+        bg-[#22272e]
         border-2
         flex
         flex-col
         justify-start
-        text-[#EEEEEE]
+        text-[#f8f8f8]
         ">
         <Navbar />
         <header class="
@@ -160,16 +162,18 @@ import data from '../data.json';
                 flex-row
                 h-screen
                 items-center
-                justify-between
+                justify-center
                 max-w-screen-md
                 
                 ">
-                <div class="
+                <div id="img-profile" 
+                    class="
                         border-2
                         flex 
                         flex-col
                         items-center 
-                        justify-end       
+                        justify-end
+                        m-5
                         ">
                     <img id="profile-img" src="/franmore-dev-profile.jpg" alt="profile" 
                         class="
@@ -177,7 +181,7 @@ import data from '../data.json';
                             max-w-xs
                             rounded-full
                             transition-[0.15s]
-                            w-3/4
+                            
                         "/>
                 </div>
 
@@ -189,15 +193,17 @@ import data from '../data.json';
                         items-center 
                         justify-center 
                         profile-description 
+                        m-5
                         ">
                     <div id="titulos">
                         <h1 class="
-                            text-5xl
-                            font-medium">
+                            text-4xl
+                            font-semibold">
                             Hi, I'm Franco🤚
                         </h1>
                         <h2 class="
-                            text-3xl
+                            text-2xl
+                            font-semibold
                             mt-3">
                             <span> I'm a front-end developer.</span>
                         </h2>
@@ -211,12 +217,12 @@ import data from '../data.json';
                         <a href={data.email} class="mt-3 drop-shadow-2xl"  >
                             <button 
                                 class="
-                                    bg-[#76ABAE] 
-                                    drop-shadow-md
+                                    bg-[#ffc83d] 
+                                    drop-shadow-lg
                                     font-semibold
                                     h-12 
                                     rounded-full 
-                                    text-[#EEEEEE]
+                                    text-[#001e1d]
                                     text-2xl  
                                     w-40 
                                 ">Contacto</button>
@@ -229,7 +235,7 @@ import data from '../data.json';
 
         <slot />
 
-        <!-- <Footer /> -->
+        <Footer />
 
     </body>
 </html>
@@ -237,7 +243,7 @@ import data from '../data.json';
     body {
         font-family: "Montserrat", sans-serif;
     }
-    h2 {
+    h2, h1 {
         font-family: "Quicksand", sans-serif;
     }
 </style>
