@@ -27,6 +27,6 @@ jobs: # Describe los trabajos que se ejecutan dentro del flujo de trabajo.
             git pull 
 
             #  Instala las dependencias y compila el proyecto.
-            npm install 
+            npm install --no-audit --no-fund --no-optional
             npm run build # comando para deployar astro
             exit
