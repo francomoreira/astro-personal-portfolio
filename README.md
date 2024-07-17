@@ -1,3 +1,5 @@
+[![.github/workflows/deploy.yml](https://github.com/francomoreira/astro-personal-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/francomoreira/astro-personal-portfolio/actions/workflows/deploy.yml)
+
 # 🚀 Personal Portfolio in Astro
 
 ## Bienvenido a mi portfolio personal
