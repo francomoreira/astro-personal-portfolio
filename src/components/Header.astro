@@ -1,0 +1,86 @@
+---
+import data from '../data.json';
+---
+
+<header class="
+flex 
+items-center 
+justify-center
+">
+    <div id=""
+    class="
+    border-2
+    container
+    flex
+    flex-row
+    h-screen
+    items-center
+    justify-center
+    max-w-screen-md
+    ">
+        <div id="img-profile" 
+        class="
+            border-2
+            flex 
+            flex-col
+            items-center 
+            justify-end
+            m-5
+            ">
+            <img id="profile-img" src="/franmore-dev-profile.jpg" alt="profile" 
+                class="
+                    drop-shadow-lg
+                    max-w-xs
+                    rounded-full
+                    transition-[0.15s]
+                    
+                "/>
+            </div>
+
+            <div id="hero"
+            class="
+                border-2
+                flex 
+                flex-col 
+                items-center 
+                justify-center 
+                profile-description 
+                m-5
+                ">
+                <div id="titulos">
+                    <h1 class="
+                        text-4xl
+                        font-semibold">
+                        Hi, I'm Franco🤚
+                    </h1>
+                    <h2 class="
+                        text-2xl
+                        font-semibold
+                        mt-3">
+                        <span> I'm a front-end developer.</span>
+                    </h2>
+                </div>
+                <div id="boton-CTA" class="
+                                        border-2 
+                                        flex 
+                                        items-center 
+                                        justify-center
+                                        ">
+                    <a href={data.email} class="mt-3 drop-shadow-2xl"  >
+                        <button 
+                            class="
+                                bg-[#ffc83d] 
+                                drop-shadow-lg
+                                font-semibold
+                                h-12 
+                                rounded-full 
+                                text-[#001e1d]
+                                text-2xl  
+                                w-40 
+                            ">Contacto</button>
+                    </a>
+                </div>  
+        </div>
+
+    </div>
+</header>

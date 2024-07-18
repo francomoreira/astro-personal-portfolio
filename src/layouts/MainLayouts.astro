@@ -1,7 +1,7 @@
 ---
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
-import data from '../data.json';
 ---
 
 <!DOCTYPE html>
@@ -14,8 +14,7 @@ import data from '../data.json';
         <!-- incluyendo tailwind -->
         <link href="./src/output.css" rel="stylesheet">
 
-        <!-- agregando los meta para facebook (Open Graph -->
-        <!-- https://freecodetools.org/ogp/ -->
+        <!-- agregando los meta para facebook (Open Graph https://freecodetools.org/ogp/ -->
         <meta property="og:title" content="Franco Moreira - Portfolio">
         <meta property="og:site_name" content="Franmore.ar">
         <meta property="og:url" content="https://franmore.ar/">
@@ -30,116 +29,8 @@ import data from '../data.json';
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        
         <title>My Portfolio</title>
-<!--         <style>
-            * {
-                margin: 0;
-            }
-            :root {
-                /* COLORES */
-                --bg-color: #22272e;
-                --headline: #f8f8f8;
-                --p: #abd1c6;
-                --button: #22272e;
-                --button-hover: #16181d;
-                --button-txt: #001e1d;
-                --shadow-box: #16181D;
-                /* fonts sizes */
-                --sm: 70%;
-                --md: 80%;
-                --lg: 100%;
-                --xl: 120%;
-                --xxl: 140%;
-            }
-            body {
-                display: flex;
-                height: 100vh;
-                flex-direction: column;
-                justify-content: flex-start;
-                background: var(--bg-color);
-                color: var(--headline);
-                font-family: "Quicksand", sans-serif;
-            }
-            h2 {
-                font-family: "Roboto Mono", monospace;
-                font-size: var(--lg);
-                margin-bottom: 4vh;
-                margin-top: 1vh;
-            }
-            h3 {
-                font-family: "Roboto Mono", monospace;
-                font-size: 100%;
-                margin-bottom: 2vh;
-            }
-            a {
-                text-decoration: none;
-                color: var(--headline);
-            }
-            
-            /* contendor principal */
-            .container-profile {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
-                /* >> foto perfil */
-                #profile-img {
-                    margin: 3vw;
-                    border-radius: 50%;
-                    width: 40vw;
-                    max-width: 300px;
-                    transition: 0.15s;
-                    box-shadow: 5px 1px 10px var(--shadow-box);
-                }
-                    #profile-img:hover {
-                        width: 40vw;
-                    }
-                /* >> descripcion principal */
-                .profile-description {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    margin: 4vw;
-                    
-                }
-                    .profile-description span {
-                        display: block;
-                        margin-top: 1rem;
-                        
-                    }
-                    .container-profile .profile-description .boton-cta {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        text-decoration: none;
-                        background-color: #ffc83d;
-                        color: var(--button-txt);
-                        box-shadow: 5px 1px 10px var(--shadow-box);
-                        text-decoration: none;
-                        padding: 15px;
-                        margin: 0.5vh;
-                        margin-top: 3vh;
-                        border-radius: 3vw;
-                        height: 1vh;
-                        width: 12vw;
-                        font-size: var(--md);
-                        font-weight: 700;
-                        transition: 0.1s;
-                        
-                    }
-                        .boton-cta:hover {
-                            background-color: var(--p);
-                            /* font-size: 3vh; */
-                            height: 2vh;
-                            width: 14vw;
-                            border-radius: 5vw;
-                        }
 
-        </style> -->
     </head>
     <body class="
         bg-[#22272e]
@@ -148,94 +39,15 @@ import data from '../data.json';
         flex-col
         justify-start
         text-[#f8f8f8]
+        
         ">
         <Navbar />
-        <header class="
-                    flex 
-                    items-center 
-                    justify-center
-                    ">
-            <div class="
-                border-2
-                container
-                flex
-                flex-row
-                h-screen
-                items-center
-                justify-center
-                max-w-screen-md
-                
-                ">
-                <div id="img-profile" 
-                    class="
-                        border-2
-                        flex 
-                        flex-col
-                        items-center 
-                        justify-end
-                        m-5
-                        ">
-                    <img id="profile-img" src="/franmore-dev-profile.jpg" alt="profile" 
-                        class="
-                            drop-shadow-lg
-                            max-w-xs
-                            rounded-full
-                            transition-[0.15s]
-                            
-                        "/>
-                </div>
+        <Header />
 
-                <div id="hero"
-                    class="
-                        border-2
-                        flex 
-                        flex-col 
-                        items-center 
-                        justify-center 
-                        profile-description 
-                        m-5
-                        ">
-                    <div id="titulos">
-                        <h1 class="
-                            text-4xl
-                            font-semibold">
-                            Hi, I'm Franco🤚
-                        </h1>
-                        <h2 class="
-                            text-2xl
-                            font-semibold
-                            mt-3">
-                            <span> I'm a front-end developer.</span>
-                        </h2>
-                    </div>
-                    <div id="boton-CTA" class="
-                                            border-2 
-                                            flex 
-                                            items-center 
-                                            justify-center
-                                            ">
-                        <a href={data.email} class="mt-3 drop-shadow-2xl"  >
-                            <button 
-                                class="
-                                    bg-[#ffc83d] 
-                                    drop-shadow-lg
-                                    font-semibold
-                                    h-12 
-                                    rounded-full 
-                                    text-[#001e1d]
-                                    text-2xl  
-                                    w-40 
-                                ">Contacto</button>
-                        </a>
-                    </div>  
-                </div>
 
-            </div>
-        </header>
+        <slot /> <!--aqui entra un Pages -->
 
-        <slot />
-
-        <Footer />
+        <Footer /> <!--aqui entra un Componente -->
 
     </body>
 </html>
