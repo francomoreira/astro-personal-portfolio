@@ -1,46 +1,62 @@
 ---
-import data from '../data.json';
+import data          from '../data.json';
+import { Image }     from 'astro:assets';
+
+import iconTwitter   from '../assets/twitter-white.svg';
+import iconGithub    from '../assets/brand-github-filled.svg';
+import iconLinkedin  from '../assets/linkedin.svg';
+import iconInstagram from '../assets/brand-instagram.svg';
+import iconMail      from '../assets/mail-filled-white.svg';
 ---
 
 <div class="links-s-m">
         <a href={data.twitter}
             ><img
                 class="social-media"
-                src="logos/twitter-white.svg"
-                alt=""
+                src={iconTwitter.src}
+                alt="icono twitter"
                 width="30px"
+                loading="lazy"
             /></a
         >
         <a href={data.github}
             ><img
+                alt="icono github"
                 class="social-media"
-                src="logos/brand-github-filled.svg"
-                alt=""
+                src={iconGithub.src}
                 width="30px"
+                loading="lazy"
             /></a
         >
         <a href={data.linkedin}
             ><img
+                alt="icono linkedin"
                 class="social-media"
-                src="logos/linkedin.svg"
-                alt=""
+                src={iconLinkedin.src}
                 width="30px"
+                loading="lazy"
             /></a
         >
         <a href={data.instagram}
             ><img
+                alt="icono instagram"
                 class="social-media"
-                src="./logos/brand-instagram.svg"
+                src={iconInstagram.src}
                 width="30px"
+                loading="lazy"
             /></a
         >
-        <a href={data.email}><img
-                class="social-media"
-                src="./logos/mail-filled-white.svg"
-                alt=""
+        <a href={data.email}>
+            <img 
+                alt="icono email" 
+                class="social-media" 
+                src={iconMail.src} 
                 width="30px"
-            /></a
-        >
+                loading="lazy"
+            />
+        </a>
+
+        
     </div>
 
 <style>
