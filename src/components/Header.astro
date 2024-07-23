@@ -1,0 +1,79 @@
+---
+import data from '../data.json';
+---
+
+<header>
+    <div class="container-profile">
+        <img id="profile-img" src="franmore-dev-profile.jpg" alt="profile"/>
+        <div class="profile-description">
+            <h1>Hi, I'm Franco🤚
+                <span>I'm a front-end developer.</span>
+            </h1>
+            <a class="boton-cta" href={data.email}><strong>Contacto</strong></a>
+        </div>
+    </div>
+</header>
+
+<style>
+    /* contendor principal */
+    .container-profile {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+                /* >> foto perfil */
+                #profile-img {
+                    margin: 3vw;
+                    border-radius: 50%;
+                    width: 40vw;
+                    max-width: 300px;
+                    transition: 0.15s;
+                    box-shadow: 5px 1px 10px var(--shadow-box);
+                }
+                    #profile-img:hover {
+                        width: 40vw;
+                    }
+                /* >> descripcion principal */
+                .profile-description {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 4vw;
+                    
+                }
+                    .profile-description span {
+                        display: block;
+                        margin-top: 1rem;
+                        
+                    }
+                    .container-profile .profile-description .boton-cta {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        background-color: #ffc83d;
+                        color: var(--button-txt);
+                        box-shadow: 5px 1px 10px var(--shadow-box);
+                        text-decoration: none;
+                        padding: 15px;
+                        margin: 0.5vh;
+                        margin-top: 3vh;
+                        border-radius: 3vw;
+                        height: 1vh;
+                        width: 12vw;
+                        font-size: var(--md);
+                        font-weight: 700;
+                        transition: 0.1s;
+                        
+                    }
+                        .boton-cta:hover {
+                            background-color: var(--p);
+                            /* font-size: 3vh; */
+                            height: 2vh;
+                            width: 14vw;
+                            border-radius: 5vw;
+                        }
+</style>
