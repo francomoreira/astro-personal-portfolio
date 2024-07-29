@@ -1,0 +1,26 @@
+---
+
+import MainLayout from '../../layouts/MainLayouts.astro';
+import { getCollection } from 'astro:content';
+
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+
+
+---
+
+<MainLayout>
+<h1> Articulos Recientes </h1>
+
+{posts.map((post) => (
+
+			<h2>{post.data.title}</h2>
+			<a href={`/blog/${post.slug}/`}>	
+				<img src={post.data.heroImage} width={360} height={200} alt={post.data.heroImageAlt}>
+			</a>
+			<h4>{post.data.description || 'nada'}</h4>
+))}
+
+</MainLayout>

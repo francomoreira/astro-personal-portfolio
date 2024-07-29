@@ -1,28 +1,33 @@
 ---
 import data from '../data.json';
-import IconosSocialmedia from './iconosSocialmedia.astro';
 ---
 <script>
     const iconoBurger = document.querySelector('.icono-burger-menu');
     const menuburger = document.querySelector('.links-burger');
 
+
+
     iconoBurger.addEventListener('click', () => {
-        menuburger.classList.toggle('invisible')
+    menuburger.classList.toggle('invisible')
     });
+
+
 </script>
 
 <nav>
     <div class="mi-nombre">
         <p><a href="/">{data.nombre}</a></p>
     </div>
+    
 <!-- Icono burger menu -->
     <div class='icono-burger-menu'>
         <img  class="menu-icon" src="/logos/menu.svg" alt="menu icon">
     </div>
+
 <!-- los links del navbar -->
     <div class="links-navbar">
-        <!-- <a href="#">Habilidades</a> -->
-        <a href="#my-projects">My Projects</a>
+        <a href="/blog">Blog</a>
+        <a href="#my-projects">Projects</a>
         <!-- <a href="#">Formación</a> -->
         <a href={data.email}>Contacto</a>
     </div>
@@ -31,13 +36,11 @@ import IconosSocialmedia from './iconosSocialmedia.astro';
 <!-- html menu mobile -->
 <div class="modal" >
     <div class="links-burger invisible">
-        <!-- <a href="#">Habilidades</a> -->
+        <a href="/blog">Blog</a>
         <a href="#my-projects">Portfolio</a>
-        <!-- <a href="#">Formación</a> -->
         <a href={data.email}>Contacto</a>
     </div>
 </div>
-
 
 <style>
 * {
