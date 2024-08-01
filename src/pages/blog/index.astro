@@ -1,0 +1,106 @@
+---
+import MainLayout from '../../layouts/MainLayouts.astro';
+import { getCollection } from 'astro:content';
+
+// objeto con todos los post
+const postsAll = await getCollection('blog');
+
+// funcion que ordena los post del mas nuevo al mas viejo, segun el pubDate
+const postsOrdenados = postsAll.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<style>
+	.title-index {
+		/* border: 1px dotted red; */
+		text-align: center;
+		color: #ffffffc5;
+		
+	}
+	.allarticles {
+		/* border: 1px dotted red; */
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.allarticles > .article {
+		text-decoration: none;
+		/* border: 1px dotted green; */
+		background-color: var(--shadow-box);
+		border-radius: 12px;
+		box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+		-webkit-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+		-moz-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+		width: 320px;
+	}
+	.allarticles > .article > .container_portada {
+		/* border: 1px dotted yellow; */
+		overflow: hidden;
+		/* width: 100%;
+		height: 173px; */
+	}
+		.allarticles > .article > .container_portada > .cover {
+			aspect-ratio: 2/1;
+			border-radius: 12px;
+			background-position: center;
+			background-size: cover;
+			object-fit: cover; /*  con esto no se deforma la img */
+			position: relative;
+			transition: all 300ms ease;
+			height:100%;
+			width:100%;
+		}
+		.allarticles > .article > .container_portada > .cover:hover {
+			transform: rotate(4deg) scale(1.2) skew(-3deg) translate(1px,1px);
+			-webkit-transform: rotate(4deg) scale(1.2) skew(-3deg) translate(1px,1px);
+			-moz-transform: rotate(4deg) scale(1.2) skew(-3deg) translate(1px,1px);
+		}
+	.allarticles > .article > .container_texto {
+		padding: 1rem;
+	}
+		.allarticles > .article > .container_texto > .title {
+			color: #dee3fac5;
+			font-size: 25px;
+			font-weight: 600;
+			margin: 0;
+		}
+		.allarticles > .article > .container_texto > .description {
+			color: #ffffff67;
+			font-size: 15px;
+			/* line-height: 1.6; */
+		}
+		@media only screen and (max-width: 768px) {
+			.allarticles {
+				width: 100%;
+			}
+			.allarticles > .article {
+				width: 100%;
+				margin-bottom: 4vh;
+			}
+			.allarticles > .article > .container_portada > .cover {
+				aspect-ratio: 21/9;
+			}
+			.allarticles > .article > .container_texto {
+			padding: 0.5rem;
+			}
+		}
+
+</style>
+
+
+<MainLayout title="My Blog">
+<h1 class="title-index"> Artículos Recientes </h1>
+<div class="allarticles">
+	{postsOrdenados.map((post) => (
+		
+		<a class="article" href={`/blog/${post.slug}/`}>
+				<div class="container_portada">
+					<img class="cover" src={post.data.heroImage} alt={post.data.title}>
+				</div>
+				<div class="container_texto">
+					<h2 class="title">{post.data.title}</h2>
+					<p class="description">{post.data.description}</p>
+				</div>
+		</a>
+		
+	))}
+</div>
+</MainLayout>

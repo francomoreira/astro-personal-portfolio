@@ -1,6 +1,5 @@
 ---
 import data          from '../data.json';
-import { Image }     from 'astro:assets';
 
 import iconTwitter   from '../assets/twitter-white.svg';
 import iconGithub    from '../assets/brand-github-filled.svg';
@@ -12,47 +11,47 @@ import iconMail      from '../assets/mail-filled-white.svg';
 <div class="links-s-m">
         <a href={data.twitter}
             ><img
-                class="social-media"
-                src={iconTwitter.src}
                 alt="icono twitter"
-                width="30px"
+                class="social-media"
                 loading="lazy"
+                src={iconTwitter.src}
+                width="30px"
             /></a
         >
         <a href={data.github}
             ><img
                 alt="icono github"
                 class="social-media"
+                loading="lazy"
                 src={iconGithub.src}
                 width="30px"
-                loading="lazy"
             /></a
         >
         <a href={data.linkedin}
             ><img
                 alt="icono linkedin"
                 class="social-media"
+                loading="lazy"
                 src={iconLinkedin.src}
                 width="30px"
-                loading="lazy"
             /></a
         >
         <a href={data.instagram}
             ><img
                 alt="icono instagram"
                 class="social-media"
+                loading="lazy"
                 src={iconInstagram.src}
                 width="30px"
-                loading="lazy"
             /></a
         >
         <a href={data.email}>
             <img 
                 alt="icono email" 
                 class="social-media" 
+                loading="lazy"
                 src={iconMail.src} 
                 width="30px"
-                loading="lazy"
             />
         </a>
 
@@ -63,12 +62,17 @@ import iconMail      from '../assets/mail-filled-white.svg';
     .links-s-m {
         display: flex;
         align-items:flex-end;
-        height: 5vh;
+        height: 4vh;
     }
     .social-media {
-        filter: drop-shadow(2px 4px 2px #00000086);
+        /* filter: drop-shadow(2px 4px 2px #00000086); */
+        transition: all 300ms ease;
     }
     .social-media:hover {
         margin-bottom: 1vh;
+        transform: rotate(5deg) scale(1.5) skew(-3deg) translate(1px,1px);
+		-webkit-transform: rotate(5deg) scale(1.5) skew(-3deg) translate(1px,1px);
+		-moz-transform: rotate(5deg) scale(1.5) skew(-3deg) translate(1px,1px);
+        filter: drop-shadow(2px 4px 2px #00000086);
     }
 </style>
