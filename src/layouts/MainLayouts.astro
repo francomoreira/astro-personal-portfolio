@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+const { title } = Astro.props;
 ---
 
 
@@ -26,7 +27,7 @@ import Footer from "../components/Footer.astro";
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://www.franmore.ar/images/franco-moreira-profile.jpg">
 
-        <title>My Portfolio</title>
+        <title>{title || "demo"}</title>
         <style>
             * {
                 margin: 0;
@@ -79,13 +80,19 @@ import Footer from "../components/Footer.astro";
                 text-align: left;
                 margin: 0 auto;
             }
+            @media only screen and (max-width: 768px) {
+                main.container {
+                    width: 100%;
+                }
+            }
+
         </style>
     </head>
     <body>
         <Navbar />
-        <div class="container">
+        <main class="container">
             <slot />
-        </div>       
+        </main>       
         <Footer />
     </body>
 </html>

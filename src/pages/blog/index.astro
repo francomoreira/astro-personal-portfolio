@@ -10,14 +10,14 @@ const postsOrdenados = postsAll.sort((a, b) => b.data.pubDate.valueOf() - a.data
 ---
 <style>
 	.allarticles {
-		border: 1px dotted red;
+		/* border: 1px dotted red; */
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 	.allarticles > .article {
 		text-decoration: none;
-		border: 1px dotted green;
+		/* border: 1px dotted green; */
 		background-color: var(--shadow-box);;
 		border-radius: 8px;
 		box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
@@ -51,23 +51,40 @@ const postsOrdenados = postsAll.sort((a, b) => b.data.pubDate.valueOf() - a.data
 			color: #dee3fac5;
 			font-size: 25px;
 			font-weight: 600;
+			margin: 0;
 		}
 		.allarticles > .article > .container_texto > .description {
 			color: #ffffff67;
 			font-size: 15px;
 			/* line-height: 1.6; */
 		}
+		@media only screen and (max-width: 768px) {
+			.allarticles {
+				width: 100%;
+			}
+			.allarticles > .article {
+				width: 100%;
+				margin-bottom: 4vh;
+			}
+			.allarticles > .article > .container_portada > .cover {
+				aspect-ratio: 21/9;
+			}
+			.allarticles > .article > .container_texto {
+			padding: 0.5rem;
+			}
+		}
+
 </style>
 
 
-<MainLayout>
+<MainLayout title="My Blog">
 <h1> Artículos Recientes </h1>
 <div class="allarticles">
 	{postsOrdenados.map((post) => (
 		
 		<a class="article" href={`/blog/${post.slug}/`}>
 				<div class="container_portada">
-					<img class="cover" src={post.data.heroImage} alt={post.data.heroImageAlt}>
+					<img class="cover" src={post.data.heroImage} alt={post.data.title}>
 				</div>
 				<div class="container_texto">
 					<h2 class="title">{post.data.title}</h2>
