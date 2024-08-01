@@ -26,3 +26,6 @@ leeme.txt
 # vscode
 
 .vscode/
+
+# imagenes - servir por FTP
+public/hero-img
