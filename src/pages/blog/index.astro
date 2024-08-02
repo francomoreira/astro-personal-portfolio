@@ -30,6 +30,8 @@ const postsOrdenados = postsAll.sort((a, b) => b.data.pubDate.valueOf() - a.data
 		-webkit-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
 		-moz-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
 		width: 320px;
+		
+		margin: 16px;
 	}
 	.allarticles > .article > .container_portada {
 		/* border: 1px dotted yellow; */
@@ -45,7 +47,6 @@ const postsOrdenados = postsAll.sort((a, b) => b.data.pubDate.valueOf() - a.data
 			object-fit: cover; /*  con esto no se deforma la img */
 			position: relative;
 			transition: all 300ms ease;
-			height:100%;
 			width:100%;
 		}
 		.allarticles > .article > .container_portada > .cover:hover {
@@ -73,6 +74,7 @@ const postsOrdenados = postsAll.sort((a, b) => b.data.pubDate.valueOf() - a.data
 			}
 			.allarticles > .article {
 				width: 100%;
+				margin: 0;
 				margin-bottom: 4vh;
 			}
 			.allarticles > .article > .container_portada > .cover {
