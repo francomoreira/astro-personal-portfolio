@@ -2,7 +2,7 @@
 title: 'First post'
 description: 'description de ejemplo'
 pubDate: 'Jul 08 2022'
-heroImage: 'hero-img/blog-placeholder-1.jpg'
+heroImage: '/hero-img/lee-menos-pero-lee-bien.jpg'
 heroImageAlt: 'Imagen de portada'
 ---
 

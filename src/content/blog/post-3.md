@@ -2,7 +2,7 @@
 title: 'First post'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 08 2020'
-heroImage: 'hero-img/blog-placeholder-1.jpg'
+heroImage: '/hero-img/lee-menos-pero-lee-bien.jpg'
 heroImageAlt: 'Imagen de portada'
 ---
 
