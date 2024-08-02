@@ -49,14 +49,14 @@ const { title } = Astro.props;
                 --xxl: 140%;
             }
             body {
-                display: flex;
-                min-height: 100vh;
-                
-                flex-direction: column;
-                justify-content: flex-start;
                 background: var(--bg-color);
+                /* border: 10px solid red; */
                 color: var(--headline);
+                display: flex;
+                flex-direction: column;
                 font-family: "Quicksand", sans-serif;
+                /* justify-content: flex-start; */
+                min-height: 100vh;
             }
             h2 {
                 font-family: "Roboto Mono", monospace;
@@ -73,10 +73,10 @@ const { title } = Astro.props;
                 text-decoration: none;
                 color: var(--headline);
             }
-            div.container {
+            main.container {
                 min-height: 100vh;
-                width: 70vw;
-                /* border: 2px solid red; */
+                width: 80vw;
+                /* border: 10px solid yellow; */
                 text-align: left;
                 margin: 0 auto;
             }
