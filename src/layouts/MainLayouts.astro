@@ -1,93 +1,21 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
+
 const { title } = Astro.props;
+
 ---
 
 
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!-- sitemap -->
-        <link rel="sitemap" href="/sitemap-index.xml" /> 
-        
-        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet"/>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- agregando los meta para facebook (Open Graph -->
-        <!-- https://freecodetools.org/ogp/ -->
-        <meta property="og:title" content="Franco Moreira - Portfolio">
-        <meta property="og:site_name" content="Franmore.ar">
-        <meta property="og:url" content="https://franmore.ar/">
-        <meta property="og:description" content="Programador web Frontend - de San Juan, Argentina, con experiencia en desarrollo web y conocimiento en el sector agropecuario.  Agro Tech, SEO, CAD  y data science.">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://www.franmore.ar/images/franco-moreira-profile.jpg">
-
-        <title>{title || "demo"}</title>
-        <style>
-            * {
-                margin: 0;
-            }
-            :root {
-                /* COLORES */
-                --bg-color: #22272e;
-                --headline: #f8f8f8;
-                --p: #abd1c6;
-                --button: #22272e;
-                --button-hover: #16181d;
-                --button-txt: #001e1d;
-                --shadow-box: #16181D;
-                /* fonts sizes */
-                --sm: 70%;
-                --md: 80%;
-                --lg: 100%;
-                --xl: 120%;
-                --xxl: 140%;
-            }
-            body {
-                background: var(--bg-color);
-                /* border: 10px solid red; */
-                color: var(--headline);
-                display: flex;
-                flex-direction: column;
-                font-family: "Quicksand", sans-serif;
-                /* justify-content: flex-start; */
-                min-height: 100vh;
-            }
-            h2 {
-                font-family: "Roboto Mono", monospace;
-                font-size: var(--lg);
-                margin-bottom: 4vh;
-                margin-top: 1vh;
-            }
-            h3 {
-                font-family: "Roboto Mono", monospace;
-                font-size: 100%;
-                margin-bottom: 2vh;
-            }
-            a {
-                text-decoration: none;
-                color: var(--headline);
-            }
-            main.container {
-                min-height: 100vh;
-                width: 80vw;
-                /* border: 10px solid yellow; */
-                text-align: left;
-                margin: 0 auto;
-            }
-            @media only screen and (max-width: 768px) {
-                main.container {
-                    width: 100%;
-                }
-            }
-
-        </style>
-    </head>
+    <Head title={title}/>
+    <style>
+        * {
+            margin: 0;    
+        }
+    </style>
     <body>
         <Navbar />
         <main class="container">

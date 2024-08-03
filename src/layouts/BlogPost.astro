@@ -1,81 +1,22 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
 ---
 
 
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!-- sitemap -->
-        <link rel="sitemap" href="/sitemap-index.xml" /> 
-        
-        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet"/>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- agregando los meta para facebook (Open Graph -->
-        <!-- https://freecodetools.org/ogp/ -->
-        <meta property="og:title" content={title}>
-        <meta property="og:site_name" content="Franmore.ar">
-        <meta property="og:url" content="https://franmore.ar/">
-        <meta property="og:description" content={description}>
-        <meta property="og:type" content="website">
-        <meta property="og:image" content={heroImage}>
-
-        <title>{title}</title>
+    <Head title={title}/>
         <style>
             * {
                 margin: 0;
             }
-            :root {
-                /* COLORES */
-                --bg-color: #22272e;
-                --headline: #f8f8f8;
-                --p: #abd1c6;
-                --button: #22272e;
-                --button-hover: #16181d;
-                --button-txt: #001e1d;
-                --shadow-box: #16181D;
-                /* fonts sizes */
-                --sm: 70%;
-                --md: 80%;
-                --lg: 100%;
-                --xl: 120%;
-                --xxl: 140%;
-            }
-            body {
-                display: flex;
-                min-height: 100vh;
-                flex-direction: column;
-                justify-content: flex-start;
-                background: var(--bg-color);
-                color: var(--headline);
-                font-family: "Quicksand", sans-serif;
-                
-            }
-            h2 {
-                font-family: "Roboto Mono", monospace;
-                font-size: var(--lg);
-                margin-bottom: 4vh;
-                margin-top: 1vh;
-            }
-            h3 {
-                font-family: "Roboto Mono", monospace;
-                font-size: 100%;
-                margin-bottom: 2vh;
-            }
-            a {
-                text-decoration: none;
-                color: var(--headline);
-            }
             div.container {
-                /* border: 1px dotted yellow; */
+                
             }
                 div.container-img-portada {
                     /* border: 2px solid #ff6550; */
@@ -111,7 +52,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 margin: 0 auto;
             }
         </style>
-    </head>
     <body>
         <Navbar />
         <div class="container">
