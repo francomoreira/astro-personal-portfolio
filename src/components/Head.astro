@@ -1,5 +1,5 @@
 ---
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, type } = Astro.props;
 ---
 
 <head>
@@ -16,7 +16,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <meta property="og:site_name" content="Franmore.ar">
     <meta property="og:url" content="https://franmore.ar/">
     <meta property="og:description" content={description || "Programador web Frontend - de San Juan, Argentina, con experiencia en desarrollo web y conocimiento en el sector agropecuario.  Agro Tech, SEO, CAD  y data science."}>
-    <meta property="og:type" content="website">
+    <meta property="og:type" content={type || "website"}>
     <meta property="og:image" content={heroImage || "https://www.franmore.ar/franco-moreira-profile.jpg"}>
 
     <title>{title}</title>
