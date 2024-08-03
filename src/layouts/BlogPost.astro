@@ -15,10 +15,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             * {
                 margin: 0;
             }
-            div.container {
-                
+            main.container {
+                margin: 0 auto;
+                min-height: 100vh;
+                text-align: left;
+                width: 80vw;
             }
-                div.container-img-portada {
+                main.container > div.container-img-portada {
                     /* border: 2px solid #ff6550; */
                     width: 90vw;
                     height: 30vh;
@@ -29,7 +32,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                     max-width: 1000px;
                     
                 }
-                    img.img-portada-post {
+                    main.container > div.container-img-portada > img.img-portada-post {
                         width:100%;
                         height:100%;
                         max-width: 1000px;
@@ -37,13 +40,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                         filter: drop-shadow(5px 11px 15px #0f0f0f67);
                         transition: all 300ms ease;
                     }
-                    img.img-portada-post:hover {
+                    main.container > div.container-img-portada > img.img-portada-post:hover {
                         transform: rotate(4deg) scale(1.2) skew(-3deg) translate(1px,1px);
                         -webkit-transform: rotate(4deg) scale(1.2) skew(-3deg) translate(1px,1px);
                         -moz-transform: rotate(4deg) scale(1.2) skew(-3deg) translate(1px,1px);
                         cursor: pointer;
                     }
-            div.container-text {
+            main.container > div.container-text {
                 /* border: 1px dotted blue; */
                 min-height: 100vh;
                 width: 80vw;
@@ -54,14 +57,14 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         </style>
     <body>
         <Navbar />
-        <div class="container">
-            <div class="container-img-portada">
-                <img class="img-portada-post" src={heroImage} alt={title}>
-            </div>
-            <div class="container-text">
-                <slot />
-            </div>
-        </div> 
+            <main class="container">
+                <div class="container-img-portada">
+                    <img class="img-portada-post" src={heroImage} alt={title}>
+                </div>
+                <div class="container-text">
+                    <slot />
+                </div>
+            </main> 
         <Footer />
     </body>
 </html>
