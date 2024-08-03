@@ -21,7 +21,7 @@ La simplicidad de la estructura hace que sea fácil escalar el sitio y administr
 
 
 ## Demo
-* https://my.franmore.ar
+* https://franmore.ar
 
 ## Agradecimiento
 
