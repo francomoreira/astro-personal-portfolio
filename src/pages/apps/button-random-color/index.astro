@@ -1,0 +1,93 @@
+---
+import MainLayouts from "../../../layouts/MainLayouts.astro";
+---
+<style>
+    .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        margin-top: 4vh;
+        margin-bottom: 5vh;
+    }
+        .random-color-box {
+            -moz-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+            -webkit-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+            align-items: center;
+            background-color: #e16162;
+            border-radius: 1vh;
+            box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+            display: flex;
+            flex-direction: column;
+            height: 40vh;
+            justify-content: space-between;
+            margin-top: 8vh;
+            transition: 0.5s;
+            width: 40vh;
+            border: 1px solid rgba(165, 165, 165, 0.048);
+        }
+            .resultado {
+                font-size: large;
+                font-weight: bold;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.183);
+            }
+            .boton {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                background-color: #f9bc60;
+                border-radius: 20px;
+                width: 50%;
+                margin-bottom: 1vh;
+                cursor: pointer;
+            }
+
+            .noselect {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -khtml-user-select: none;
+                -ms-user-select: none;
+            }
+</style>
+
+
+
+<MainLayouts title="Button Random Color 🚀">
+    <div class="container">
+        <h1>Button Random Color 🚀</h1>
+        <div class="random-color-box" id="random-color-box">
+            <div class=""></div>
+            <div class="resultado" id="resultado">#e16162</div>
+            <div class="boton noselect">Click Me!</div>
+        </div>
+        <p>*Click button for random colors</p>
+    </div>
+</MainLayouts>
+
+<script>
+    let resultado = document.querySelector(".resultado");
+    let random_color_box = document.querySelector(".random-color-box") as HTMLElement;
+
+    let primaryBoton = document.querySelector(".boton");
+
+    if (primaryBoton) {
+        primaryBoton.addEventListener('click', randomColor)
+    }
+    function randomColor() {
+        // genero un color hexagonal random.
+        var hexaColor = Math.floor(Math.random()*16777215).toString(16);
+        hexaColor = "#" + hexaColor;
+
+        // imprimo el texto de pantalla
+        if (resultado) {  // !el if es para validar que no sea null, astro me tira un warning
+            resultado.innerHTML = hexaColor;
+        }
+        
+        // modifico el backgroundColor del div
+        if (random_color_box) {
+            random_color_box.style.backgroundColor = hexaColor;
+        }
+    }
+
+</script>

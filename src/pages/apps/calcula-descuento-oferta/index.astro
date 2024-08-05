@@ -1,0 +1,115 @@
+---
+import MainLayouts from "../../../layouts/MainLayouts.astro";
+---
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+.container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+h1 {
+    margin-top: 4vh;
+    margin-bottom: 5vh;
+}
+form {
+    -moz-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+    -webkit-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+    align-items: center;
+    background-color: #97C93E;
+    border: 1px solid rgba(165, 165, 165, 0.048);
+    border-radius: 1vh;
+    box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: center;
+    width: 40vh;
+}
+input {
+    height: 1.5rem;
+    margin: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid rgba(69, 121, 68, 0.493);
+
+}
+button {
+    margin: 0rem;
+}
+#resultado {
+    margin-bottom: 0rem;
+}
+
+.boton-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #ffc83d;
+    text-decoration: none;
+    padding: 1rem;
+    margin-top: 2vh;
+    border-radius: 3vw;
+    height: 1vh;
+    width: 12vw;
+    font-size: var(--md);
+    font-weight: 700;
+    transition: 0.1s;
+    border: 0;
+    
+}
+.boton-cta:hover {
+    background-color: var(--p);
+    height: 2vh;
+    width: 14vw;
+    border-radius: 5px;
+}
+
+</style>
+
+<MainLayouts title="Calculadora de ofertas!">
+    <div class="container">
+        <h1>Calculemos tu oferta!</h1>
+        <form>
+            <span>Precio del producto:</span>
+            <input type="number" id='numero'>
+            <span>Descuento en %</span>
+            <input type="number" id='porcentaje'>
+            <button id='boton-calcular' type="reset" class="boton-cta">Calcular</button>
+            <p id='resultado'></p>
+        </form>
+    </div>
+</MainLayouts>
+
+<script>
+const boton = document.getElementById('boton-calcular');
+    
+if (boton) {
+    boton.addEventListener('click', calcular);
+}
+
+const respDOM = document.getElementById('resultado');
+
+function calcular() {
+
+    const inputPrecio = document.getElementById('numero') as HTMLInputElement;
+    const precio = Number(inputPrecio.value);
+
+    const inputPorcentaje = document.getElementById('porcentaje') as HTMLInputElement;
+    const porcentaje = Number(inputPorcentaje.value);  
+    
+    if (precio > 0 && porcentaje > 0 && porcentaje <= 100) {
+    const r = (precio * (100 - porcentaje)) / 100;
+    
+    if (respDOM) {
+        respDOM.innerHTML = "Pagas: " + r + "$ en la caja!";
+    }
+    
+    } else {
+    if (respDOM) {
+        respDOM.innerHTML = "Hey! No olvides ingresar bien los datos </br>NO puedes dejar espacios en blancos </br> y el descuento nunca superará el 100%";
+        }
+    }
+}
+</script>

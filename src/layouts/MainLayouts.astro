@@ -3,19 +3,19 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Head from "../components/Head.astro";
 
-const { title } = Astro.props;
+const { title, descr, img} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="es">
-    <Head title={title}/>
+    <Head title={title} description={descr} heroImage={img}/>
     <style>
         * {
             margin: 0;    
         }
         main.container {
             min-height: 100vh;
-            width: 80vw;
+            width: 100%;
             text-align: left;
             margin: 0 auto;
         }

@@ -1,13 +1,16 @@
 ---
 import MainLayouts from '../layouts/MainLayouts.astro';
 import Hero from "../components/Hero.astro";
+
+import App_links from "../components/personal-projects-links.astro";
 ---
 
 
 <MainLayouts title="My Portfolio">
     <Hero />
+    
 	<style>
-		.container-links {
+	.container-links {
         background-color: #9BA4B4;
         display: flex;
         align-items: center;
@@ -17,55 +20,11 @@ import Hero from "../components/Hero.astro";
         margin-top: 5vh;
         text-shadow: 2px 2px 2px #0000003d;
     }
-        .personal-projects-links {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            padding-bottom: 1vh;
-        }
-            .boton-links {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                background-color: var(--button);
-                box-shadow: 2px 2px 2px #0000003d;
-                color: var(--headline);
-                padding: 15px;
-                margin: 0.5vh;
-                border-radius: 3vw;
-                height: 1vh;
-                font-size: var(--md);    
-                transition: 0.1s;
-            }
-            .boton-links:last-child {
-                margin-bottom: 10vh;
-            }
-            .boton-links:hover {
-                background-color: var(--button-hover);
-                font-size: 3vh;
-                height: 2vh;
-                border-radius: 5vw;
-            }
-	</style>
-	<div class="container-links">
-		<h2 class='h2-de-la-pagina' id="my-projects">My Projects 🚀</h2> 
-		<div class="personal-projects-links"> 
-			<a class="boton-links" href="https://francomoreira.github.io/projects/sticky-menu-fixed/"><strong>Sticky Menu</strong></a>
-            <a class="boton-links" href="https://francomoreira.github.io/projects/random-color/"><strong>Random color - Button</strong></a>
-			<a class="boton-links" href="https://codepen.io/francomoreira/pen/RwYWqWN"><strong>Calcular bonos de descuentos</strong></a>
-			<a class="boton-links" href="https://francomoreira.github.io/projects/Descarga-miniaturas-youtube/"><strong>YT Thumbnails Downloader</strong></a>
-			<a class="boton-links" href="https://francomoreira.github.io/projects/Palindrome-Checker/"><strong>Palindrome Checker</strong></a>
-			<a class="boton-links" href="https://codepen.io/francomoreira/pen/QWmdvoE"><strong>Switch - Light & Dark</strong></a>
-			<a class="boton-links" href="https://calculate-delay-time.netlify.app/"><strong>Delay Tempo Calculator</strong></a>
-            <a class="boton-links" href="https://francomoreira.github.io/projects/API-rest-Random-Cat/"><strong>API Rest - Random Cats</strong></a>
-            <a class="boton-links" href="https://codepen.io/francomoreira/pen/ZEqLZxV"><strong>Flex: Wrap</strong></a>
-            <a class="boton-links" href="https://teeny-berry.surge.sh/"><strong>Cards 1</strong></a>
-            <a class="boton-links" href="https://hallowed-toys.surge.sh/"><strong>Cards 2 - FakeStore API & Fetch</strong></a>
-            <a class="boton-links" href="https://dear-board.surge.sh/"><strong>ToDo App - React</strong></a>
-            <!-- <a class="boton-links" href="#"><strong>exampler</strong></a>
-            <a class="boton-links" href="#"><strong>exampler</strong></a> -->
+    </style>
 
-		</div>
-	</div> 
+    
+    <div class="container-links">
+        <h2 class="h2-de-la-pagina" id="my-projects">My Projects 🚀</h2>
+        <App_links />
+    </div>
 </MainLayouts>

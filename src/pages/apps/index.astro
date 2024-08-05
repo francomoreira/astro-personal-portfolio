@@ -1,0 +1,31 @@
+---
+import MainLayouts from '../../layouts/MainLayouts.astro';
+import '../../components/ui/button.css'
+
+const pages = await import('./pages-index.json');
+---
+
+<MainLayouts title="Algunas aplicaciones! 🚀">
+	<style>
+		.container-links {
+			background-color: #9BA4B4;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+			height: 100vh;
+		}
+		.h2-de-la-pagina {
+			margin-top: 5vh;
+			text-shadow: 2px 2px 2px #0000003d;
+		}
+	</style>
+	<div class="container-links">
+		<h2 class="h2-de-la-pagina">Algunas aplicaciones! 🚀</h2>
+		{pages.default.map(page => (
+				<a href={`/apps${page.path}`} class="boton-links">
+					{page.title}
+				</a>
+		))}
+	</div>	
+</MainLayouts>

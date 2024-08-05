@@ -1,0 +1,25 @@
+.boton-links {
+    align-items: center;
+    background-color: var(--button);
+    border-radius: 3vw;
+    box-shadow: 2px 2px 2px #0000003d;
+    color: var(--headline);
+    display: flex;
+    font-size: medium;
+    font-weight: 500;
+    height: 1vh;
+    justify-content: center;
+    margin: 0.5vh;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.1s;
+}
+.boton-links:last-child {
+    margin-bottom: 10vh;
+}
+.boton-links:hover {
+    background-color: var(--button-hover);
+    font-size: 3vh;
+    height: 2vh;
+    border-radius: 5vw;
+}
