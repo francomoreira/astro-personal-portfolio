@@ -42,7 +42,6 @@ function getDirectoriesWithH1(dir, baseDir, result = [], id = 1) {
 const directoriesWithH1 = getDirectoriesWithH1(directoryPath, directoryPath);
 writeFileSync(outputFilePath, JSON.stringify(directoriesWithH1, null, 2));
 
-/* ANSI escape code for green text
+// ANSI escape code for green text
 const greenText = '\x1b[32m%s\x1b[0m';
-console.log(greenText, 'File pages-index.json has been generated at', outputFilePath);
-*/
+console.log(greenText, 'File pages-index.json has been generated at');
