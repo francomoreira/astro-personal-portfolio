@@ -4,55 +4,62 @@ import Footer from "../components/Footer.astro";
 import Head from "../components/Head.astro";
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
-
 ---
-
 
 <!DOCTYPE html>
 <html lang="es">
     
         <style>
             * {
-                margin: 0;
+                margin: 0;    
             }
             main.container {
+                border: 2px solid #5d5d6313;
+                border-radius: 1vh;
                 margin: 0 auto;
                 min-height: 100vh;
                 text-align: left;
-                width: 80vw;
+                width: 86vw;
+                overflow: hidden;
             }
+                
                 main.container > div.container-img-portada {
                     /* border: 2px solid #ff6550; */
-                    width: 90vw;
-                    height: 30vh;
-                    border-radius: 20px;
+                    /* width: 90vw; */
+                    /* height: 30vh; */
+                    /* border-radius: 20px; */
                     text-align: center;
                     margin: 0 auto;
                     overflow: hidden;
                     max-width: 1000px;
+                    filter: drop-shadow(5px 11px 15px #0f0f0f67);
                     
                 }
                     main.container > div.container-img-portada > img.img-portada-post {
+                        
                         width:100%;
-                        height:100%;
+                        /* height:100%; */
                         max-width: 1000px;
                         object-fit: cover;
                         filter: drop-shadow(5px 11px 15px #0f0f0f67);
                         transition: all 300ms ease;
                     }
                     main.container > div.container-img-portada > img.img-portada-post:hover {
-                        transform: rotate(4deg) scale(1.2) skew(-3deg) translate(1px,1px);
-                        -webkit-transform: rotate(4deg) scale(1.2) skew(-3deg) translate(1px,1px);
-                        -moz-transform: rotate(4deg) scale(1.2) skew(-3deg) translate(1px,1px);
+                        transform: rotate(3deg) scale(1.12) skew(-3deg) translate(1px,1px);
+                        -webkit-transform: rotate(3deg) scale(1.12) skew(-3deg) translate(1px,1px);
+                        -moz-transform: rotate(3deg) scale(1.12) skew(-3deg) translate(1px,1px);
+                        
                         cursor: pointer;
                     }
             main.container > div.container-text {
                 /* border: 1px dotted blue; */
                 min-height: 100vh;
-                width: 80vw;
+                width: 75vw;
                 max-width: 800px;
                 text-align: left;
                 margin: 0 auto;
+                padding-bottom: 6vh;
+                font-size: large;
             }
         </style>
         <Head title={title} type="article"/>

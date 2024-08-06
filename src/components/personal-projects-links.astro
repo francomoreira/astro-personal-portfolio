@@ -1,5 +1,6 @@
 ---
 import '../components/ui/button.css'
+const apps = (await import('../pages/apps/pages-index.json')).default;
 ---
 
 <style>
@@ -13,10 +14,10 @@ import '../components/ui/button.css'
 </style>
 
 <div class="personal-projects-links"> 
+    <a class="boton-links" href={`/apps${apps[0].path}`}><strong>{apps[0].title}</strong></a>
+    <a class="boton-links" href={`/apps${apps[1].path}`}><strong>{apps[1].title}</strong></a>
+    <a class="boton-links" href={`/apps${apps[2].path}`}><strong>{apps[2].title}</strong></a>
     <a class="boton-links" href="https://francomoreira.github.io/projects/sticky-menu-fixed/"><strong>Sticky Menu</strong></a>
-    <a class="boton-links" href="https://francomoreira.github.io/projects/random-color/"><strong>Random color - Button</strong></a>
-    <a class="boton-links" href="https://codepen.io/francomoreira/pen/RwYWqWN"><strong>Calcular bonos de descuentos</strong></a>
-    <a class="boton-links" href="https://francomoreira.github.io/projects/Descarga-miniaturas-youtube/"><strong>YT Thumbnails Downloader</strong></a>
     <a class="boton-links" href="https://francomoreira.github.io/projects/Palindrome-Checker/"><strong>Palindrome Checker</strong></a>
     <a class="boton-links" href="https://codepen.io/francomoreira/pen/QWmdvoE"><strong>Switch - Light & Dark</strong></a>
     <a class="boton-links" href="https://calculate-delay-time.netlify.app/"><strong>Delay Tempo Calculator</strong></a>
