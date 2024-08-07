@@ -1,5 +1,12 @@
 [![.github/workflows/deploy.yml](https://github.com/francomoreira/astro-personal-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/francomoreira/astro-personal-portfolio/actions/workflows/deploy.yml)
 
+<a href="https://gitmoji.dev">
+  <img
+    src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square"
+    alt="Gitmoji"
+  />
+</a>
+
 # 🚀 Personal Portfolio in Astro
 
 ## Bienvenido a mi portfolio personal
