@@ -1,6 +1,4 @@
-[![.github/workflows/deploy.yml](https://github.com/francomoreira/astro-personal-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/francomoreira/astro-personal-portfolio/actions/workflows/deploy.yml)
-
-<a href="https://gitmoji.dev">
+[![.github/workflows/deploy.yml](https://github.com/francomoreira/astro-personal-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/francomoreira/astro-personal-portfolio/actions/workflows/deploy.yml) <a href="https://gitmoji.dev">
   <img
     src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square"
     alt="Gitmoji"
@@ -36,6 +34,6 @@ La simplicidad de la estructura hace que sea fácil escalar el sitio y administr
 
 ## Agradecimiento
 
-¡Gracias por visitar mi portfolio! Espero que disfrutes explorando mis trabajos. 😊
+¡Gracias por visitar este repo, espero sea de inspiración! 😊
 
 ---
