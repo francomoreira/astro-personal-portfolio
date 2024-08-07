@@ -20,9 +20,15 @@ Al no depender de una base de datos o servidores dinámicos, se reducen los ries
 La simplicidad de la estructura hace que sea fácil escalar el sitio y administrar el contenido.
 
 
-## Demo
+## Demo portfolio
 * https://franmore.ar
+## Demo blog
+* https://franmore.ar/blog
+## Demo proyectitos o aplicaciones
+* https://franmore.ar/apps
 
 ## Agradecimiento
 
 ¡Gracias por visitar mi portfolio! Espero que disfrutes explorando mis trabajos. 😊
+
+---
