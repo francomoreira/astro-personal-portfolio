@@ -33,15 +33,34 @@ let data = {
 </MainLayouts>
 
 <style>
-
-h1 {
-    margin-top: 4vh;
-    margin-bottom: 5vh;
-}
 .container {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+h1 {
+    margin-top: 4vh;
+    margin-bottom: 5vh;
+    margin-inline: 2rem;
+}
+.container > div#result-box {
+    /* height: 15vh; */
+    align-items: center;
+    background-color: var(--button-hover);
+    border-radius: 10px;
+    border: 3px solid var(--p);
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: center;
+    padding-bottom: 2vh;
+    transition: 0.2s;
+    width: 40vh;
+}
+.sombra {
+    -moz-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+    -webkit-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+    box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
 }
     #thumbnail-preview {
         width: 28vh;
@@ -51,20 +70,7 @@ h1 {
         margin: 4vh;
         display: flex;
     }
-    div#result-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--button-hover);
-        border: 3px solid var(--p);
-        /* height: 15vh; */
-        width: 40vh;
-        height: 40vh;
-        border-radius: 10px;
-        padding-bottom: 2vh;
-        transition: 0.2s;
-    }
+
     #resultado {
         font-size: small;
         word-wrap: break-word;
@@ -101,11 +107,7 @@ h1 {
     #checkbox-and-p {
         display: flex;
     }
-    .sombra {
-        -moz-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
-        -webkit-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
-        box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
-    }
+
 </style>
 
 <script>

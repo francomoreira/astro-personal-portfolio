@@ -2,31 +2,33 @@
 import MainLayouts from "../../../layouts/MainLayouts.astro";
 ---
 <style>
-    .container {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
-    h1 {
-        margin-top: 4vh;
-        margin-bottom: 5vh;
-    }
-        .random-color-box {
-            -moz-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
-            -webkit-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
-            align-items: center;
-            background-color: #e16162;
-            border-radius: 1vh;
-            box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
-            display: flex;
-            flex-direction: column;
-            height: 40vh;
-            justify-content: space-between;
-            margin-top: 8vh;
-            transition: 0.5s;
-            width: 40vh;
-            border: 1px solid rgba(165, 165, 165, 0.048);
-        }
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    margin-top: 4vh;
+    margin-bottom: 5vh;
+    margin-inline: 2rem;
+}
+.random-color-box {
+    align-items: center;
+    background-color: #e16162;
+    border-radius: 1vh;
+    border: 1px solid rgba(165, 165, 165, 0.048);
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-between;
+    transition: 0.5s;
+    width: 40vh;
+}
+.sombra {
+    -moz-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+    -webkit-box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+    box-shadow: 5px 8px 11px -6px rgba(0,0,0,0.64);
+}
             .resultado {
                 font-size: large;
                 font-weight: bold;
@@ -56,10 +58,10 @@ import MainLayouts from "../../../layouts/MainLayouts.astro";
 <MainLayouts title="Button Random Color 🚀">
     <div class="container">
         <h1>Button Random Color 🚀</h1>
-        <div class="random-color-box" id="random-color-box">
+        <div class="random-color-box sombra" id="random-color-box">
             <div class=""></div>
             <div class="resultado" id="resultado">#e16162</div>
-            <div class="boton noselect">Click Me!</div>
+            <div class="boton noselect sombra">Click Me!</div>
         </div>
         <p>*Click button for random colors</p>
     </div>

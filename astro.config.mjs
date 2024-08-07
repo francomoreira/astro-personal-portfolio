@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://my.franmore.ar/',
+  site: 'https://franmore.ar/',
   integrations: [mdx(), sitemap()],
 });

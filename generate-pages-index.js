@@ -7,12 +7,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const directoryPath = join(__dirname, 'src/pages/apps');
-const outputFilePath = join(directoryPath, 'pages-index.json');
+const outputDir = join(__dirname, 'src/data');
+const outputFilePath = join(outputDir, 'pages-index.json'); // donde se crea el pages-index.json
 
 if (!existsSync(directoryPath)) {
   console.error(`Directory ${directoryPath} does not exist.`);
   process.exit(1);
 }
+
+// Crea el directorio de salida si no existe
+if (!existsSync(outputDir)) {
+  mkdirSync(outputDir, { recursive: true });
+}
+
 
 function getDirectoriesWithH1(dir, baseDir, result = [], id = 1) {
   const files = readdirSync(dir);
