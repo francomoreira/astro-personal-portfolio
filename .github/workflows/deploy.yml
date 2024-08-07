@@ -1,7 +1,7 @@
 on: #  Define los eventos que desencadenan el flujo de trabajo
-  push: # Se ejecuta cuando haces un push a tu repositorio
-    branches:
-      - main # en la rama main
+  #push: # Se ejecuta cuando haces un push a tu repositorio
+  #  branches:
+  #    - main # en la rama main
   workflow_dispatch: # Puedes ejecutar este flujo manualmente desde la interfaz web de GitHub Actions.
 jobs: # Describe los trabajos que se ejecutan dentro del flujo de trabajo.
   run_pull: # El nombre del trabajo. Se ejecuta en una máquina virtual Ubuntu
