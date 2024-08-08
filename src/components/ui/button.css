@@ -19,7 +19,7 @@
 }
 .boton-links:hover {
     background-color: var(--button-hover);
-    font-size: 3vh;
+    /* font-size: 3vh;
     height: 2vh;
-    border-radius: 5vw;
+    border-radius: 5vw; */
 }

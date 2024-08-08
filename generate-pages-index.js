@@ -51,4 +51,4 @@ writeFileSync(outputFilePath, JSON.stringify(directoriesWithH1, null, 2));
 
 // ANSI escape code for green text
 const greenText = '\x1b[32m%s\x1b[0m';
-console.log(greenText, 'File pages-index.json has been generated at');
+console.log(greenText, 'The pages-index.json file has been successfully generated 😎');
